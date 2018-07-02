@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/editTitleLabel"
+        android:textSize="24sp"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTitleLabel"
+        android:id="@+id/editTitle"
+        tools:text = "This is a book title!"
+        android:focusableInTouchMode="true"
+        android:textSize="24sp"
+        android:inputType="textCapWords"
+        android:nextFocusDown="@+id/editAuthor"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:id="@+id/editAuthorLabel"
+
+        android:layout_below="@+id/editTitle"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/editAuthor"
+        tools:text = "Dean Koontz"
+        android:focusableInTouchMode="true"
+        android:layout_below="@id/editAuthorLabel"
+        android:textSize="24sp"
+        android:nextFocusDown="@+id/editGenre"
+        android:inputType="textCapWords"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:layout_below="@id/editAuthor"
+        android:id="@+id/editGenreLabel"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/editGenre"
+        tools:text = "Sci-Fi"
+        android:focusableInTouchMode="true"
+        android:layout_below="@id/editGenreLabel"
+        android:nextFocusDown="@+id/editPublished"
+        android:inputType="textCapWords"
+        android:textSize="24sp"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Published Date"
+        android:layout_below="@id/editGenre"
+        android:id="@+id/editPublishedLabel"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:ems="10"
+        tools:text="September 22, 1978"
+        android:id="@id/editPublished"
+        android:layout_below="@id/editPublishedLabel"
+        android:textSize="24sp"
+        android:inputType="textCapWords"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read?"
+        android:id="@+id/editReadLabel"
+        android:layout_below="@id/editPublished"
+        android:textSize="24sp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editRead"
+        android:textSize="24sp"
+        android:layout_toRightOf="@id/editReadLabel"
+        android:layout_alignTop="@id/editReadLabel"
+        android:checked="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btnSaveButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/btnCancelButton"
+        android:layout_alignBottom="@+id/btnSaveButton"
+        android:layout_toRightOf="@+id/btnSaveButton"
+        android:layout_toEndOf="@+id/btnSaveButton"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:longClickable="false"
+        android:layout_below="@+id/editRead"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:progressTint="@android:color/holo_blue_bright" />
+</RelativeLayout>
